@@ -1,5 +1,7 @@
-/* https://flatuicolors.com/palette/nl
-#B53471 */
+/*https://flatuicolors.com/palette/gb
+#192a56
+#dcdde1
+#c23616*/
 
 *{
     margin: 0;
@@ -8,6 +10,65 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #B53471;
-    color: #fff;
+    background-color: #dcdde1;
+    color: #192a56;
+}
+#header{
+    width: 95%;
+    height: 100vh;
+    background-image: url(../images/design-2a.png);
+
+    background-size: 40%;
+    background-position: bottom;
+    background-position-x: right;
+    background-repeat: no-repeat;
+  
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 250px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #192a56;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #c23616;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #c23616;
 }
