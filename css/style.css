@@ -10,19 +10,17 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #dcdde1;
+    background-color: #fff;
     color: #192a56;
 }
 #header{
     width: 95%;
     height: 100vh;
     background-image: url(../images/design-2a.png);
-
     background-size: 40%;
     background-position: bottom;
     background-position-x: right;
     background-repeat: no-repeat;
-  
 }
 .container{
     padding: 10px 10%;
@@ -63,7 +61,8 @@ nav ul li a:hover::after{
 }
 .header-text{
     margin-top: 20%;
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: 800;
 }
 .header-text h1{
     font-size: 60px;
@@ -71,4 +70,186 @@ nav ul li a:hover::after{
 }
 .header-text h1 span{
     color: #c23616;
+}
+/* ---------------------- About Section -------------------- */
+#about{
+    width: 95%;
+    height: 100vh; 
+    padding: 80px 0;
+    color: #192a56;  
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 50px;
+    border: solid 2px #192a56;
+    margin-top: 30px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #192a56;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #c23616;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #c23616;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/* ---------------------- Services Section -------------------- */
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #dcdde1;
+    padding: 30px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: #c23616;
+}
+.services-list div h2{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #c23616;
+    font-size: 12px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #7f8fa6;
+    transform: translateY(-10px);
+}
+/* ---------------------- Portfolio Section -------------------- */
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.75), #e84118);
+    color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    transition: height 0.5s;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    /* border: 1px solid #7f8fa6; */
+    padding: 14px 50px;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    background-color: #e84118;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #7f8fa6;
 }

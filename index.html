@@ -33,6 +33,144 @@
             </div>
         </div>
     </div>
+    <!-- ---------------------- About Section --------------------  -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/design-1c.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello. My name is Gina Rodolfo, I recently graduated Full Stack Web Development
+                        in KodeGo Bootcamp. In order to kick-start my career, I am looking for a job of a 
+                        Junior Frontend Developer. I am ambitious and hard-working. Believe you’ll give me a 
+                        chance to prove my words.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Frontend Development</li>
+                            <li><span>Management/Marketing</span><br>Social Media Marketing</li>
+                            <li><span>AutoCAD, Canva and Figma</span><br>CAD 2D, Canva and Figma Mock-up Designing</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2019 - Current</span><br>Marketing Manager</li>
+                            <li><span>2002 - 2018</span><br>AutoCAD Operator</li>
+                            <li><span>1999 - 2001</span><br>Cost Estimator</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022</span><br>KodeGo Bootcamp</li>
+                            <li><span>2000</span><br>Crescent Technologies</li>
+                            <li><span>1998</span><br>University of Southern Mindanao</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------- Services Section --------------------  -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa fa-code"></i>
+                    <h2>Web Designing</h2>
+                    <p> I design code and implement website for your online business.
+                        I have also some projects and coding challenge during our 
+                        bootcamp to consider your desired website.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa fa-google-plus"></i>
+                    <h2>Social Media Marketing</h2>
+                    <p> I look into new platforms and think about what strategies would work best 
+                        to help your business thrive on the respective platforms. 
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa fa-building"></i>
+                    <h2>AutoCAD Designing</h2>
+                    <p> I work with engineers, architects, and clients to ensure designs are completed 
+                        to specifications and safety regulations.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- ---------------------- Portfolio Section --------------------  -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./images/p1.jpg">
+                    <div class="layer">
+                        <h3>Superlove Fish Trading Site</h3>
+                        <p>My first individual project and presented to the KodeGo, 
+                            a website for our business. 
+                        </p>
+                        <a href="#"><i class="fa fa-external-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/p2.jpg">
+                    <div class="layer">
+                        <h3>Superlove Shopping Store </h3>
+                        <p>This is my practice coding project and planning to have an
+                            online store in God's perfect timing. 
+                        </p>
+                        <a href="#"><i class="fa fa-external-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/p3.jpg">
+                    <div class="layer">
+                        <h3>Superlove Bistro Website</h3>
+                        <p>It is a complete food order website, where an admin can manage 
+                            the food online order.
+                        </p>
+                        <a href="#"><i class="fa fa-external-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">SEE MORE</a>
+
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
     
 </body>
 </html>
