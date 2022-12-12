@@ -18,18 +18,19 @@
         <div class="container">
             <nav>
                 <img src="./images/logo.png" class="logo">
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Porfolio</a></li>
                     <li><a href="#">Contact</a></li>
-
+                    <i class="fa fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Web Developer</p>
-                <h1>Hi, I'm <span>Gina Rodolfo</span>  <br>From Tacurong City</h1>
+                <h1>Hi, I'm <span>Gina Rodolfo</span>  <br>From Philippines</h1>
             </div>
         </div>
     </div>
@@ -89,7 +90,7 @@
                         I have also some projects and coding challenge during our 
                         bootcamp to consider your desired website.
                     </p>
-                    <a href="#">Learn More</a>
+                    <!-- <a href="#">Learn More</a> -->
                 </div>
                 <div>
                     <i class="fa fa-google-plus"></i>
@@ -97,7 +98,7 @@
                     <p> I look into new platforms and think about what strategies would work best 
                         to help your business thrive on the respective platforms. 
                     </p>
-                    <a href="#">Learn More</a>
+                    <!-- <a href="#">Learn More</a> -->
                 </div>
                 <div>
                     <i class="fa fa-building"></i>
@@ -105,7 +106,7 @@
                     <p> I work with engineers, architects, and clients to ensure designs are completed 
                         to specifications and safety regulations.
                     </p>
-                    <a href="#">Learn More</a>
+                    <!-- <a href="#">Learn More</a> -->
                 </div>
             </div>
         </div>
@@ -203,6 +204,19 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0"
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-200px"
+        }
+
     </script>
     
 </body>
