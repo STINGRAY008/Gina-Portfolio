@@ -9,6 +9,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: #fff;
     color: #192a56;
@@ -381,6 +384,11 @@ nav .fa{
         flex-basis: 100%;
     }
 
+}
+#msg{
+    color: #192a56;
+    margin-top: -40px;
+    display: block;
 }
 
 
